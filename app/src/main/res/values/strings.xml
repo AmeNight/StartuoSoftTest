@@ -1,0 +1,18 @@
+<resources>
+    <!--Common-->
+    <string name="app_name">Survey</string>
+    <!--Intro-->
+    <string name="screen_intro_title">Welcome to the survey.</string>
+    <string name="screen_intro_description">We only have two questions and we need less than 1 minute of your time.</string>
+    <string name="screen_intro_action">Start survey</string>
+    <!--Multi Choice-->
+    <string name="screen_multi_choice_title">How many hours did you have electricity yesterday?</string>
+    <string name="screen_multi_choice_1">0 – 5 hours</string>
+    <string name="screen_multi_choice_2">6 – 12 hours</string>
+    <string name="screen_multi_choice_3">13 – 18 hours</string>
+    <string name="screen_multi_choice_4">19 – 24 hours</string>
+    <!--Data Input-->
+    <string name="screen_data_input_title">What total did you pay for your electricity last week?</string>
+    <string name="screen_data_input_currency">EUR</string>
+    <string name="screen_data_input_action">Submit Survey</string>
+</resources>

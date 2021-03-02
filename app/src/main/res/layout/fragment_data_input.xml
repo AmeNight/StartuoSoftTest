@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dataInputTitle"
+        style="@style/TextTitlePrimeStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/screen_data_input_title" />
+
+    <com.startupsoft.survey.ui.widgets.EditTextCursorEnd
+        android:id="@+id/dataInputEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@null"
+        android:cursorVisible="false"
+        android:maxLength="12"
+        android:fontFamily="@font/roboto900"
+        android:inputType="number"
+        android:text="0,00"
+        android:textColor="@color/text_input"
+        android:textSize="52sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/dataInputCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/bg_pink_light_rounded"
+        android:fontFamily="@font/roboto400"
+        android:paddingStart="20dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="8dp"
+        android:text="@string/screen_data_input_currency"
+        android:textSize="14sp" />
+
+    <Button
+        style="@style/SurveyButtonStyle"
+        android:layout_marginTop="35dp"
+        android:text="@string/screen_data_input_action" />
+</LinearLayout>
