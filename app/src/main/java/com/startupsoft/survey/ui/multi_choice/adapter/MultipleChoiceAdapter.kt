@@ -5,12 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.startupsoft.survey.R
 import com.startupsoft.survey.extentions.inflateView
-import com.startupsoft.survey.extentions.onClick
 import com.startupsoft.survey.ui.multi_choice.MultipleChoiceType
 import kotlinx.android.synthetic.main.cell_multiple_choice.view.*
 
 class MultipleChoiceAdapter(
-    private val onItemSelected: (MultipleChoiceType) -> Unit
+    private val onItemSelected: (MultipleChoiceType, Boolean) -> Unit
 ) : RecyclerView.Adapter<MultipleChoiceViewHolder>() {
 
     private val choices: MutableList<MultipleChoiceViewModel> = ArrayList()
@@ -31,10 +30,10 @@ class MultipleChoiceAdapter(
         notifyDataSetChanged()
     }
 
-    fun removeSelection(type: MultipleChoiceType) {
+    fun setSelected(type: MultipleChoiceType, selected: Boolean) {
         choices.forEachIndexed { index, model ->
             if (model.type == type) {
-                choices[index] = model.copy(type = type)
+                choices[index] = model.copy(isSelected = selected)
                 notifyItemChanged(index)
                 return
             }
@@ -43,12 +42,15 @@ class MultipleChoiceAdapter(
 }
 
 class MultipleChoiceViewHolder(
-    v: View, private val onItemSelected: (MultipleChoiceType) -> Unit
+    v: View, private val onItemSelected: (MultipleChoiceType, Boolean) -> Unit
 ) : RecyclerView.ViewHolder(v) {
 
     fun bind(model: MultipleChoiceViewModel) {
         itemView.multiChoice.title = model.title
-        itemView.multiChoice.onClick { onItemSelected(model.type) }
+        itemView.multiChoice.checked = model.isSelected
+        itemView.multiChoice.onItemClick {
+            onItemSelected(model.type, it)
+        }
     }
 }
 

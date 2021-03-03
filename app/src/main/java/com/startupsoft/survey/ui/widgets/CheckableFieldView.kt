@@ -27,11 +27,8 @@ class CheckableFieldView(context: Context, attrs: AttributeSet?) : FrameLayout(c
         parseAttributes(attrs)
     }
 
-    override fun setOnClickListener(l: OnClickListener?) {
-        checkableFieldRoot.onClick {
-            checkableFieldCheckbox.toggle()
-            l?.onClick(it)
-        }
+    fun onItemClick(itemClick: (Boolean) -> Unit) {
+        checkableFieldRoot.onClick { itemClick(!checkableFieldCheckbox.isChecked) }
     }
 
     private fun parseAttributes(attrs: AttributeSet?) {

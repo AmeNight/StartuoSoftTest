@@ -5,6 +5,8 @@
     <string name="screen_intro_title">Welcome to the survey.</string>
     <string name="screen_intro_description">We only have two questions and we need less than 1 minute of your time.</string>
     <string name="screen_intro_action">Start survey</string>
+    <string name="screen_intro_sent_message">Thank you, your survey has been sent</string>
+    <string name="screen_intro_undo_action">UNDO</string>
     <!--Multi Choice-->
     <string name="screen_multi_choice_title">How many hours did you have electricity yesterday?</string>
     <string name="screen_multi_choice_1">0 – 5 hours</string>

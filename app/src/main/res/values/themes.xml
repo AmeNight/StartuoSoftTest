@@ -47,4 +47,15 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:background">@drawable/ripple_survey_button</item>
     </style>
+
+    <style name="SnackBarDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowEnterAnimation">@anim/slide_in_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
 </resources>

@@ -5,6 +5,7 @@ import android.content.Context
 import com.startupsoft.survey.data_holders.SurveyProgressDataHolder
 import com.startupsoft.survey.data_holders.SurveyProgressDataHolderImpl
 import com.startupsoft.survey.event_notifier.EventNotifier
+import com.startupsoft.survey.event_notifier.EventNotifierImpl
 import com.startupsoft.survey.utils.ThreadUtils
 
 class SurveyApp : Application() {
@@ -29,5 +30,6 @@ object AppManager {
     private fun initDependencyProviders(application: Application) {
         context = application.applicationContext
         surveyProgressDataHolder = SurveyProgressDataHolderImpl()
+        eventNotifier = EventNotifierImpl()
     }
 }

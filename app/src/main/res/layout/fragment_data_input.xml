@@ -20,9 +20,10 @@
         android:layout_marginTop="36dp"
         android:background="@null"
         android:cursorVisible="false"
-        android:maxLength="12"
         android:fontFamily="@font/roboto900"
+        android:imeOptions="actionDone"
         android:inputType="number"
+        android:maxLength="12"
         android:text="0,00"
         android:textColor="@color/text_input"
         android:textSize="52sp"
@@ -43,6 +44,7 @@
         android:textSize="14sp" />
 
     <Button
+        android:id="@+id/dataInputAction"
         style="@style/SurveyButtonStyle"
         android:layout_marginTop="35dp"
         android:text="@string/screen_data_input_action" />
